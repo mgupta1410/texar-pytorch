@@ -65,7 +65,7 @@ class BERTEncoder(EncoderBase, PretrainedBERTMixin):
                  hparams=None):
         super().__init__(hparams=hparams)
 
-        self.load_pretrained_config(pretrained_model_name, cache_dir)
+        self.load_pretrained_config(pretrained_model_name, cache_dir, hparams)
 
         # Word embedding
         self.word_embedder = WordEmbedder(
